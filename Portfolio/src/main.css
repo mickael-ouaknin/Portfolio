@@ -1,0 +1,124 @@
+h2{
+    font-family: fantasy;
+    font-weight: normal;
+    color: rgb(177, 176, 177)
+}
+
+h1#H1E{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(126, 126, 126);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p#p1{
+    color: rgb(212, 211, 211);
+    font-size: 20px;
+    font-family: Tahoma;
+    -webkit-text-stroke: 1x rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+section#SE2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#GH{
+    float: inline-end;
+    justify-items: right;
+    color: transparent;
+}
+
+button#B1{
+    background-color: transparent;
+}
+
+div#LN{
+    float: inline-end;
+    width: 50px;
+    color: transparent;
+    justify-items: left;
+}
+
+button#B2{
+    background-color: transparent;
+}
+
+div#T1{
+    justify-items: center;
+}
+
+div#TE1{
+    justify-items: center;
+}
+
+div#B3{
+    text-align: center;
+}
+
+button#NP {
+    margin: 100px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+button#NP::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #5d4164dc;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+button#NP::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+/* hover */
+button#NP:hover::before {
+    opacity: 1;
+}
+
+button#NP:active:after {
+    background: transparent;
+}
+
+button#NP:active {
+    color: #000;
+    font-weight: bold;
+}
